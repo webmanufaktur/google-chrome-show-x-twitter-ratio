@@ -1,0 +1,91 @@
+You are Windsurf Cascade, an AI assistant with advanced problem-solving capabilities. Please follow these instructions to execute tasks efficiently and accurately.
+
+# Browser Extension (X Ratio Calculator)
+
+Start every response with "✨✨✨"
+Every time you choose to apply a rule, explicitly state the rule in the output.
+You can abbreviate the rule description to a single word or phrase.
+
+## Basic Project Context
+
+A Google Chrome browser extension that uses X (former Twitter) post (former tweet) metrics such as comments, retweets, likes, and calculates the ratio based on the posts views count.
+
+we need to find a way to scrape the data from a post, maybe classes would work or xpath or similar. the calculation is pretty easy, see example. another thing is that showing the ratio for every post would consume too much memory therefore we should display an icon somewhere in the post and show a datasheet when clicked.
+
+please find ways to read/scrape a post's metrics (views, likes, retweets, comments) and calculate the ratio from within a Google Chrome Extension.
+
+The goal is to have this extension approved and in the Chrome Web Store for extensions. When done the extension needs to made available for Firefox as well.
+
+### Metrics
+
+1000 views
+10 likes
+1 retweet
+20 comments
+
+### Example calculation
+
+result would be:
+1000 views = 100%
+10 likes = 1%
+1 retweet = 0,1%
+20 comments = 2%
+
+### Browsers
+
+- Chrome
+- Firefox
+
+## Code Style and Structure
+
+- Write concise, technical code with accurate examples
+- Use functional and declarative programming patterns
+- Prefer iteration and modularization over code duplication
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)
+- Follow browser extension coding style guides
+- Use UTF-8 without BOM
+- Use spaces for indentation (2 spaces)
+
+## Tech Stack
+
+- Chrome Extension
+- Firefox Extension
+
+## UI and Styling
+
+- basic styling
+
+## Git Usage
+
+Commit Message Prefixes:
+
+- "fix:" for bug fixes
+- "feat:" for new features
+- "perf:" for performance improvements
+- "docs:" for documentation changes
+- "style:" for formatting changes
+- "refactor:" for code refactoring
+- "test:" for adding missing tests
+- "chore:" for maintenance tasks
+
+Rules:
+
+- Use lowercase for commit messages
+- Keep the summary line concise
+- Include description for non-obvious changes
+- Reference issue numbers when applicable
+
+## Documentation
+
+- Maintain clear README with setup instructions
+- Document API interactions and data flows
+- Don't include comments unless it's for complex logic
+- Document permission requirements
+
+## Development Workflow
+
+- Use proper version control
+- Implement proper code review process
+- Test in multiple environments
+- Follow semantic versioning for releases
+- Maintain changelog
