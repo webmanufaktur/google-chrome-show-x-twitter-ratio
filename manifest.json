@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "X Ratio Calculator",
-  "version": "1.0.0",
+  "version": "1.0.10",
   "description": "Calculate engagement ratios for X (Twitter) posts based on views, likes, retweets, and comments",
   "permissions": [
     "scripting",

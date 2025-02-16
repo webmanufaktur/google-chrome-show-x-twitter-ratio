@@ -84,7 +84,7 @@ Rules:
 
 ## Development Workflow
 
-- Use proper version control
+- Use proper version control and update version number after each iteration
 - Implement proper code review process
 - Test in multiple environments
 - Follow semantic versioning for releases
