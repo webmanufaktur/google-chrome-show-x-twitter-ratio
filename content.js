@@ -119,6 +119,19 @@ class XRatioCalculator {
     const popup = document.createElement('div');
     popup.className = 'x-ratio-popup';
     
+    // Determine highlights
+    const { likes, comments, retweets } = ratios;
+    const highlights = {
+      likes: likes.count > comments.count && likes.count > retweets.count ? 'green' : '',
+      comments: comments.count > likes.count ? 'green' : '',
+      retweets: retweets.count > likes.count ? 'green' : ''
+    };
+    
+    // If any metric is highlighted green, highlight likes red
+    if (highlights.comments === 'green' || highlights.retweets === 'green') {
+      highlights.likes = 'red';
+    }
+    
     // Create table HTML
     const tableHTML = `
       <h3 class="x-ratio-title">Engagement Ratios</h3>
@@ -138,18 +151,18 @@ class XRatioCalculator {
           </tr>
           <tr>
             <td class="x-ratio-type">Likes</td>
-            <td>${ratios.likes.count.toLocaleString()}</td>
-            <td>${ratios.likes.ratio}%</td>
+            <td class="${highlights.likes ? 'highlight-' + highlights.likes : ''}">${ratios.likes.count.toLocaleString()}</td>
+            <td class="${highlights.likes ? 'highlight-' + highlights.likes : ''}">${ratios.likes.ratio}%</td>
           </tr>
           <tr>
             <td class="x-ratio-type">Retweets</td>
-            <td>${ratios.retweets.count.toLocaleString()}</td>
-            <td>${ratios.retweets.ratio}%</td>
+            <td class="${highlights.retweets ? 'highlight-' + highlights.retweets : ''}">${ratios.retweets.count.toLocaleString()}</td>
+            <td class="${highlights.retweets ? 'highlight-' + highlights.retweets : ''}">${ratios.retweets.ratio}%</td>
           </tr>
           <tr>
             <td class="x-ratio-type">Comments</td>
-            <td>${ratios.comments.count.toLocaleString()}</td>
-            <td>${ratios.comments.ratio}%</td>
+            <td class="${highlights.comments ? 'highlight-' + highlights.comments : ''}">${ratios.comments.count.toLocaleString()}</td>
+            <td class="${highlights.comments ? 'highlight-' + highlights.comments : ''}">${ratios.comments.ratio}%</td>
           </tr>
           <tr>
             <td class="x-ratio-type">Bookmarks</td>
