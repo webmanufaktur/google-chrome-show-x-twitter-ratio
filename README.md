@@ -13,11 +13,13 @@ A browser extension that calculates engagement ratios for X (formerly Twitter) p
 ## Installation
 
 ### Chrome
+
 1. Open Chrome and navigate to `chrome://extensions/`
 2. Enable "Developer mode" in the top right
 3. Click "Load unpacked" and select this directory
 
 ### Firefox
+
 Firefox support coming soon.
 
 ## Usage
@@ -37,10 +39,11 @@ To modify the extension:
 ## Metrics Calculation
 
 The extension calculates the following ratios based on view count:
-- Likes ratio = (likes / views) * 100
-- Retweets ratio = (retweets / views) * 100
-- Comments ratio = (comments / views) * 100
+
+- Likes ratio = (likes / views) \* 100
+- Retweets ratio = (retweets / views) \* 100
+- Comments ratio = (comments / views) \* 100
 
 ## License
 
-MIT License
+(c) Copyright 2025 - Alexander Abelt, aapr.de
